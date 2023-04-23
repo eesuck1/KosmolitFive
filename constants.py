@@ -1,4 +1,8 @@
 import pygame
+import os
 
 
-WIDTH, HEIGHT = 900, 500
+FOLDER = "Assets"
+WIDTH, HEIGHT = 600, 800
+BACKGROUND_IMAGE = pygame.transform.scale(
+    pygame.image.load(os.path.join(FOLDER, "background.jfif")), (WIDTH, HEIGHT))
