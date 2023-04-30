@@ -8,7 +8,7 @@ from enemy import Enemy
 class Bullet(Sprite):
     def __init__(self, size: tuple[int, int], speed: int,
                  color: tuple[int, int, int], shooter: Player | Enemy):
-        super().__init__(size, shooter.get_coordinates(), speed, 1, None)
+        super().__init__(size, shooter.get_coordinates(), speed, 1)
 
         self._shooter_ = shooter
         self._color_ = color
