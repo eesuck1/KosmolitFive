@@ -32,12 +32,11 @@ class Sprite:
         self._rect_.x += x
         self._rect_.y += y
 
-    def take_damage(self, damage: int) -> None:
+    def take_damage(self, damage: int = 1) -> None:
         self._health_ -= damage
 
-    def death(self):
-        if self._health_ <= 0:
-            del self
+    def check_death(self) -> bool:
+        return self._health_ <= 0
 
     def check_collision(self, another_sprite_rect: pygame.rect.Rect) -> bool:
         return self._rect_.colliderect(another_sprite_rect)

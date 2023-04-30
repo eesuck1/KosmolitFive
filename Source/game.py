@@ -18,8 +18,6 @@ class Game:
         self._player_.shoot()
 
         self._enemies_ = self.__init_enemies__(5)
-        for enemy in self._enemies_:
-            enemy.shoot()
 
         pygame.display.set_caption("Космоліт 5")
 
@@ -58,6 +56,15 @@ class Game:
 
             for bullet in enemy.get_bullets():
                 bullet.move(1)
+
+                if bullet.check_collision(self._player_.get_rect()):
+                    bullet.take_damage()
+                    if bullet.check_death():
+                        enemy.get_bullets().remove(bullet)
+
+                    self._player_.take_damage()
+                    if self._player_.check_death():
+                        ...
 
         for bullet in self._player_.get_bullets():
             bullet.move()
