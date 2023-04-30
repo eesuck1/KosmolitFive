@@ -1,6 +1,6 @@
 import pygame
 
-from sprite import Sprite
+from Source.sprite import Sprite
 
 
 class Enemy(Sprite):
