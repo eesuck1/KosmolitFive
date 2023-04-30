@@ -1,6 +1,6 @@
 import pygame
 
-import constants
+from Source import constants
 
 from sprite import Sprite
 

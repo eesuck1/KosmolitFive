@@ -1,7 +1,5 @@
 import pygame
 
-import constants
-
 from sprite import Sprite
 from player import Player
 from enemy import Enemy

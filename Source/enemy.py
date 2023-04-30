@@ -1,9 +1,6 @@
 import pygame
 
-import constants
-
 from sprite import Sprite
-from player import Player
 
 
 class Enemy(Sprite):
