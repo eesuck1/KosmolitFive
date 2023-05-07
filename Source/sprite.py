@@ -1,4 +1,5 @@
 import pygame
+from typing import Any
 
 
 class Sprite:
@@ -38,8 +39,11 @@ class Sprite:
     def check_death(self) -> bool:
         return self._health_ <= 0
 
-    def check_collision(self, another_sprite_rect: pygame.rect.Rect) -> bool:
-        return self._rect_.colliderect(another_sprite_rect)
+    def check_collision(self, another_sprite: Any) -> bool:
+        return self._rect_.colliderect(another_sprite.get_rect())
+
+    def check_list_collision(self, another_sprites_list: list[Any]) -> int:
+        return self._rect_.collidelist([another_sprite.get_rect() for another_sprite in another_sprites_list])
 
     def draw(self, surface: pygame.Surface) -> None:
         surface.blit(self._image_, self.get_coordinates())
