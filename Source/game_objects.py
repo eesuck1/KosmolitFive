@@ -28,7 +28,7 @@ class ShootInterface(Sprite):
         self._bullets_ = []
 
     def shoot(self) -> None:
-        if len(self._bullets_) <= 5:
+        if len(self._bullets_) < 3:
             self._bullets_.append(Bullet(self.get_coordinates(), (constants.BULLET_WIDTH, constants.BULLET_HEIGHT),
                                          constants.BULLET_SPEED, (255, 255, 255)))
 

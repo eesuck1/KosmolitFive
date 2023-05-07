@@ -20,4 +20,4 @@ BACKGROUND_IMAGE = pygame.transform.scale(
 PLAYER_IMAGE = pygame.transform.scale(
     pygame.image.load(os.path.join(FOLDER, "player.png")), (SPRITE_WIDTH, SPRITE_HEIGHT))
 ENEMY_IMAGE = pygame.transform.scale(
-    pygame.image.load(os.path.join(FOLDER, "first_enemy.jpg")), (SPRITE_WIDTH, SPRITE_HEIGHT))
+    pygame.image.load(os.path.join(FOLDER, "first_enemy.png")), (SPRITE_WIDTH, SPRITE_HEIGHT))
