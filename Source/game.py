@@ -54,7 +54,7 @@ class Game:
         for bullet in self._player_.get_bullets():
             bullet.draw(self.__screen__)
 
-    def __move_objects(self) -> None:
+    def __move_objects__(self) -> None:
         self._player_.move(pygame.key.get_pressed())
 
         for enemy in self._enemies_:
