@@ -35,7 +35,7 @@ class Game:
             self.__screen__.blit(constants.BACKGROUND_IMAGE, (0, 0))
             self.__draw_sprites__()
 
-            self.__move_objects()
+            self.__move_objects__()
 
             self.__enemy_shoot__()
 
